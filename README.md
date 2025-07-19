@@ -14,7 +14,8 @@ If you are developing a production application, we recommend using TypeScript wi
 A single-page React application for managing TODOs with full CRUD functionality. Connects to the backend API for data.
 
 
-## Getting Started (Development)
+
+## Local Development
 
 1. Install dependencies:
    ```bash
@@ -24,22 +25,25 @@ A single-page React application for managing TODOs with full CRUD functionality.
    ```bash
    npm run dev
    ```
+   The app will run at `http://localhost:5173` by default and expects the backend API at `http://localhost:8080/todos`.
 
-## Production Build & Run
+## Production Build
 
-1. Set the backend API base URL default: `http://localhost:8080`.
-   
-2. Build the app (with custom API base URL):
+1. (Optional) Set the backend API base URL using an environment variable:
    ```bash
    VITE_API_BASE_URL=http://your-api-host:port npm run build
-   VITE_API_BASE_URL=http://localhost:8080 npm run build
    ```
-   This creates a `dist` folder with static files. The app will use the API base URL you set during build.
-3. Serve the static files with Nginx or any static server:
+   If not set, defaults to `http://localhost:8080`.
+2. The build output will be in the `dist` folder.
+
+## Containerization (Nginx Example)
+
+1. Build the app as above.
+2. Run with Nginx in Docker:
    ```bash
-   # Example with Nginx Docker
    docker run -d -p 80:80 -v $(pwd)/dist:/usr/share/nginx/html --name todo-ui nginx
    ```
+   The app will be available at `http://localhost` and will use the API base URL set during build.
 
 ## Features
 - List TODOs
