@@ -1,0 +1,139 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.todo-app {
+  max-width: 600px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+  padding: 32px 24px;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.todo-app h1 {
+  text-align: center;
+  color: #1976d2;
+  margin-bottom: 24px;
+}
+
+.todo-form {
+  margin-bottom: 24px;
+}
+
+.todo-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #f9f9f9;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.todo-table th, .todo-table td {
+  padding: 12px 8px;
+  text-align: left;
+}
+
+.todo-table th {
+  background: #1976d2;
+  color: #fff;
+  font-weight: 500;
+}
+
+.todo-table tr {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.todo-table tr:last-child {
+  border-bottom: none;
+}
+
+.todo-table input[type="text"] {
+  width: 90%;
+  padding: 6px 8px;
+  border: 1px solid #bdbdbd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.todo-table input[type="checkbox"] {
+  transform: scale(1.2);
+  accent-color: #1976d2;
+}
+
+.todo-table button {
+  margin-right: 6px;
+  padding: 6px 14px;
+  border: none;
+  border-radius: 4px;
+  background: #1976d2;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.todo-table button:last-child {
+  margin-right: 0;
+  background: #e53935;
+}
+
+.todo-table button:disabled {
+  background: #bdbdbd;
+  cursor: not-allowed;
+}
+
+.error {
+  color: #e53935;
+  text-align: center;
+  margin: 12px 0;
+}
+
+@media (max-width: 600px) {
+  .todo-app {
+    padding: 16px 4px;
+  }
+  .todo-table th, .todo-table td {
+    padding: 8px 4px;
+  }
+}
