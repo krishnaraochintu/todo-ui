@@ -27,8 +27,8 @@ A single-page React application for managing TODOs with full CRUD functionality.
 
 ## Production Build & Run
 
-1. Set the backend API base URL (default: `http://localhost:8080`) in `src/App.jsx` as `API_BASE_URL`.
-   - For advanced setups, use a `.env.production` file with `VITE_API_BASE_URL` and update your code to use `import.meta.env.VITE_API_BASE_URL`.
+1. Set the backend API base URL default: `http://localhost:8080`.
+   
 2. Build the app (with custom API base URL):
    ```bash
    VITE_API_BASE_URL=http://your-api-host:port npm run build
