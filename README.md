@@ -15,6 +15,7 @@ A single-page React application for managing TODOs with full CRUD functionality.
 
 
 
+
 ## Local Development
 
 1. Install dependencies:
@@ -25,25 +26,22 @@ A single-page React application for managing TODOs with full CRUD functionality.
    ```bash
    npm run dev
    ```
-   The app will run at `http://localhost:5173` by default and expects the backend API at `http://localhost:8080/todos`.
+   The app runs at `http://localhost:5173` and expects the backend API at `http://localhost:8080/todos`.
 
-## Production Build
+## Production Build & Deploy
 
-1. (Optional) Set the backend API base URL using an environment variable:
+1. Build the app (set API base URL if needed):
    ```bash
    VITE_API_BASE_URL=http://your-api-host:port npm run build
    ```
-   If not set, defaults to `http://localhost:8080`.
-2. The build output will be in the `dist` folder.
-
-## Containerization (Nginx Example)
-
-1. Build the app as above.
-2. Run with Nginx in Docker:
-   ```bash
-   docker run -d -p 80:80 -v $(pwd)/dist:/usr/share/nginx/html --name todo-ui nginx
-   ```
-   The app will be available at `http://localhost` and will use the API base URL set during build.
+   The build output will be in the `dist` folder.
+2. Serve the static files:
+   - Locally: Use any static server (e.g., `npx serve dist`)
+   - Containerized (Nginx):
+     ```bash
+     docker run -d -p 80:80 -v $(pwd)/dist:/usr/share/nginx/html --name todo-ui nginx
+     ```
+   The app will be available at `http://localhost` and use the API base URL set during build.
 
 ## Features
 - List TODOs
